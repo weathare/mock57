@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "item": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/difinitions/posiveInt"
+        },
+        "name": {
+          "type": "string",
+          "faker": "commerce.productName"
+        },
+        "created_at": {
+          "type": "string",
+          "faker": "date.past"
+        },
+        "updated_at": {
+          "type": "string",
+          "faker": "date.recent"
+        }
+      },
+      "required": ["id", "name", "created_at", "updated_at"]
+    }
+  },
+  "required": ["item"],
+  "difinitions": {
+    "posiveInt": {
+      "type": "integer",
+      "minimum": 0,
+      "exclusiveMinimum": false
+    }
+  }
+}
