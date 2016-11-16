@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "spam ham egg!!"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "I'm monty",
+      "postId": 1
+    }
+  ]
+}
