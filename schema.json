@@ -28,7 +28,7 @@
     "posiveInt": {
       "type": "integer",
       "minimum": 0,
-      "exclusiveMinimum": false
+      "exclusiveMinimum": true
     }
   }
 }
