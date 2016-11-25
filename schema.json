@@ -12,11 +12,9 @@
           "faker": "commerce.productName"
         },
         "created_at": {
-          "type": "string",
           "faker": "date.past"
         },
         "updated_at": {
-          "type": "string",
           "faker": "date.recent"
         }
       },
