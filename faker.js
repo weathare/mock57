@@ -1,5 +1,5 @@
 var jsf = require('json-schema-faker')
-var schema = require('./schema.json')
+var schema = require('./order_schema.json')
 
 module.exports = function() {
   var data = { items: [] }

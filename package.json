@@ -4,6 +4,8 @@
   "description": "REST API モックサーバ",
   "main": "index.js",
   "dependencies": {
+    "basic-auth": "^1.1.0",
+    "express-json-auth": "0.0.1",
     "json-schema-faker": "^0.3.7",
     "json-server": "^0.9.1"
   },
