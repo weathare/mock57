@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/difinitions/posiveInt"
+        },
+        "name": {
+          "type": "string",
+          "faker": "commerce.productName"
+        },
+        "count": {
+          "type": "number",
+          "faker": {
+            "random.number": {
+              "min": 1,
+              "max": 10
+            }
+          }
+        },
+        "orderd_at": {
+          "faker": "date.recent"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "count",
+        "orderd_at"
+      ]
+    }
+  },
+  "required": ["order"],
+  "difinitions": {
+    "posiveInt": {
+      "type": "integer",
+      "minimum": 0,
+      "exclusiveMinimum": true
+    }
+  }
+}
