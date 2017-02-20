@@ -1,21 +1,22 @@
-var jsonServer = require('json-server')
-var server     = jsonServer.create()
-var router     = jsonServer.router('db.json')
-var middleware = jsonServer.defaults()
-var auth       = require('basic-auth')
+var jsonServer = require('json-server');
+var server     = jsonServer.create();
+var router     = jsonServer.router('db.json');
+var middleware = jsonServer.defaults();
+var auth       = require('basic-auth');
+var express    = require("express");
 
-server.use(middleware)
+server.use(middleware);
 server.use(function (req, res, next) {
-  var check = auth(req)
+  var check = auth(req);
   if (!check || check.name !== 'john' || check.pass !== 'qwertyuiop@') {
-    res.sendStatus(401)
-    res.end('Acccess denide')
+    res.sendStatus(401);
+    res.end('Acccess denide');
  } else {
-    next()
+    next();
   }
 })
 
-server.use(router)
+server.use(router);
 server.listen(3000, function() {
-  console.log("JSON Server is running")
+  console.log("JSON Server is running");
 })
